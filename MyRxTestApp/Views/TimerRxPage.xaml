@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MyRxTestApp.Views.TimerRxPage">
+    <ContentPage.Content>
+        <FlexLayout Direction="Column">
+            <Button Text="Start/Stop Timer" Command="{Binding StartTimerCommand}"/>
+            <Button Text="Start Timer Once" Command="{Binding StartTimerOnceCommand}"/>
+            <Button Text="Start Timer With Delay" Command="{Binding StartTimerWithDelayCommand}"/>
+            <Button Text="Start Timer UI Thread" Command="{Binding StartTimerUIThreadCommand}"/>
+            
+            <Label Text="{Binding Msg}"/>
+        </FlexLayout>
+    </ContentPage.Content>
+</ContentPage>

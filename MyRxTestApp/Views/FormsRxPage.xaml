@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MyRxTestApp.Views.FormsRxPage">
+    <ContentPage.Content>
+        <FlexLayout Direction="Column" Margin="20" AlignItems="Stretch">
+            <StackLayout Orientation="Horizontal" Margin="0,0,0,10">
+                <Label Text="Name" HorizontalOptions="Start" VerticalTextAlignment="Start" />
+                <StackLayout Orientation="Vertical" HorizontalOptions="EndAndExpand" Spacing="0">
+                    <Entry Text="{Binding Name, Mode=TwoWay}"  WidthRequest="200" />
+                    <Label Text="{Binding NameErrorMessage}" HorizontalTextAlignment="End" TextColor="Red" FontSize="10"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="0,0,0,10">
+                <Label Text="Email" HorizontalOptions="Start" VerticalTextAlignment="Start" />
+                <StackLayout Orientation="Vertical" HorizontalOptions="EndAndExpand" Spacing="0">
+                    <Entry Text="{Binding Email, Mode=TwoWay}"  WidthRequest="200" />
+                    <Label Text="{Binding EmailErrorMessage}" HorizontalTextAlignment="End" TextColor="Red" FontSize="10"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Phone" HorizontalOptions="Start" VerticalTextAlignment="Start" />
+                <StackLayout Orientation="Vertical" HorizontalOptions="EndAndExpand" Spacing="0">
+                    <Entry Text="{Binding Phone, Mode=TwoWay}"  WidthRequest="200" />
+                    <Label Text="{Binding PhoneErrorMessage}" HorizontalTextAlignment="End" TextColor="Red" FontSize="10"/>
+                </StackLayout>
+            </StackLayout>
+            
+           <Button Text="Submit" IsEnabled="{Binding IsSubmitEnable}" Margin="20"/>
+            
+        </FlexLayout>
+    </ContentPage.Content>
+</ContentPage>
